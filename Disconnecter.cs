@@ -25,7 +25,6 @@ namespace HearthStoneDisconnector
 			}
 		}
 
-		// Token: 0x0600012B RID: 299 RVA: 0x00008304 File Offset: 0x00006504
 		private static Disconnecter.MIB_TCPROW[] getTcpTable()
 		{
 			IntPtr intPtr = IntPtr.Zero;
@@ -70,7 +69,6 @@ namespace HearthStoneDisconnector
 			return result;
 		}
 
-		// Token: 0x0600012C RID: 300 RVA: 0x00008420 File Offset: 0x00006620
 		private static IntPtr GetPtrToNewObject(object obj)
 		{
 			IntPtr intPtr = Marshal.AllocCoTaskMem(Marshal.SizeOf(obj));
@@ -78,7 +76,6 @@ namespace HearthStoneDisconnector
 			return intPtr;
 		}
 
-		// Token: 0x0600012D RID: 301 RVA: 0x00008444 File Offset: 0x00006644
 		private static int IPStringToInt(string IP)
 		{
 			if (IP.IndexOf(".") < 0)
@@ -104,49 +101,27 @@ namespace HearthStoneDisconnector
 
 		public enum State
 		{
-			// Token: 0x04000EEC RID: 3820
 			All,
-			// Token: 0x04000EED RID: 3821
 			Closed,
-			// Token: 0x04000EEE RID: 3822
 			Listen,
-			// Token: 0x04000EEF RID: 3823
 			Syn_Sent,
-			// Token: 0x04000EF0 RID: 3824
 			Syn_Rcvd,
-			// Token: 0x04000EF1 RID: 3825
 			Established,
-			// Token: 0x04000EF2 RID: 3826
 			Fin_Wait1,
-			// Token: 0x04000EF3 RID: 3827
 			Fin_Wait2,
-			// Token: 0x04000EF4 RID: 3828
 			Close_Wait,
-			// Token: 0x04000EF5 RID: 3829
 			Closing,
-			// Token: 0x04000EF6 RID: 3830
 			Last_Ack,
-			// Token: 0x04000EF7 RID: 3831
 			Time_Wait,
-			// Token: 0x04000EF8 RID: 3832
 			Delete_TCB
 		}
 
 		private struct MIB_TCPROW
 		{
-			// Token: 0x04000EF9 RID: 3833
 			public int dwState;
-
-			// Token: 0x04000EFA RID: 3834
 			public int dwLocalAddr;
-
-			// Token: 0x04000EFB RID: 3835
 			public int dwLocalPort;
-
-			// Token: 0x04000EFC RID: 3836
 			public int dwRemoteAddr;
-
-			// Token: 0x04000EFD RID: 3837
 			public int dwRemotePort;
 		}
 	}
